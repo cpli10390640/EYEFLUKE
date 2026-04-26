@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>สวัสดีน้องฟลุ๊คของพี่อาย</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      background: #ffe6f0;
+      padding-top: 100px;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #yes {
+      background: #ff4d88;
+      color: white;
+    }
+    #no {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<img src="eyefluke.jpg" width="300">
+
+<h1>✨สวัสดีคนใจดี No.1 ของพี่อาย🦊</h1>
+<h2>ขอบคุณที่พยายามเข้ามาในโลกของอายนะ</h2>
+
+<p>ขอบคุณที่ทำอะไรดีๆให้เสมอ และไม่คาดหวังอะไรจากอายเลย</p>
+<p>🌈 ขอบคุณที่เป็นพื้นที่ปลอดภัยให้อาย</p>
+<p>ขอบคุณที่เข้าใจอาย คอยรับฟังอาย ให้กำลังใจอาย</p>
+<p>ไม่ว่าจะเจอเรื่องดีหรือไม่ดี อายก็มีเธออยู่ข้างๆเสมอ</p>
+<p>รู้สึกดี รู้สึกสบายใจ ทุกครั้งที่อยู่กับเธอ 🫶🏻</p>
+<p>สำหรับเธอ มีแต่คำว่าขอบคุณเต็มไปหมดเลย</p>
+<p>จนไม่รู้ว่าชีวิตนี้จะเจอคนแบบนี้ได้อีกเมื่อไหร่</p>
+
+<p>อายมีคำถามนึงที่อยากถาม ... </p>
+
+<p>V</p>
+<p>V</p>
+<p>V</p>
+<p>V</p>
+<p>V</p>
+
+<h3>เป็น - แฟน - กัน - นะ🌻</h3>
+
+<button id="yes" onclick="yesClick()">อะเช 💖</button>
+<button id="no" onmouseover="moveButton()">ม่ายยยย 😆</button>
+
+<script>
+function yesClick() {
+  window.location.href = "love.html";
+}
+
+function moveButton() {
+  const btn = document.getElementById("no");
+  btn.style.position = "absolute";
+  btn.style.top = Math.random() * window.innerHeight + "px";
+  btn.style.left = Math.random() * window.innerWidth + "px";
+}
+</script>
+
+</body>
+</html>
