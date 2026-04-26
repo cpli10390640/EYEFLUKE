@@ -4,12 +4,30 @@
   <meta charset="UTF-8">
   <title>สวัสดีน้องฟลุ๊คของพี่อาย</title>
   <style>
-    body {
-      text-align: center;
-      font-family: sans-serif;
-      background: #ffe6f0;
-      padding-top: 100px;
-    }
+   body {
+    text-align: center;
+    font-family: sans-serif;
+    padding-top: 100px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* 👇 พื้นหลังรูป */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: url('BG.jpg') no-repeat center center;
+    background-size: cover;
+
+    opacity: 0.3; /* 👈 ปรับความจางตรงนี้ */
+    z-index: -1;
+  }
     button {
       padding: 15px 25px;
       font-size: 18px;
