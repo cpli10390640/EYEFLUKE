@@ -4,30 +4,47 @@
   <meta charset="UTF-8">
   <title>สวัสดีน้องฟลุ๊คของพี่อาย</title>
   <style>
-   body {
-    text-align: center;
-    font-family: sans-serif;
-    padding-top: 100px;
-    margin: 0;
-    position: relative;
-    z-index: 1;
-  }
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      padding-top: 100px;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
 
-  /* 👇 พื้นหลังรูป */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    /* 🌫 พื้นหลัง */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
 
-    background: url('BG.jpg') no-repeat center center;
-    background-size: cover;
+      background: url('BG.jpg') no-repeat center center;
+      background-size: cover;
+      opacity: 0.3;
+      z-index: -1;
+    }
 
-    opacity: 0.3; /* 👈 ปรับความจางตรงนี้ */
-    z-index: -1;
-  }
+    /* 💖 รูปแบบ Polaroid */
+    .profile-img {
+      width: 300px;
+      border-radius: 20px;
+      padding: 10px;
+      background: white;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+      margin: 0 auto 20px;
+      display: block;
+      transition: 0.3s;
+    }
+
+    /* ✨ hover นิดๆ */
+    .profile-img:hover {
+      transform: scale(1.05) rotate(-1deg);
+    }
+
     button {
       padding: 15px 25px;
       font-size: 18px;
@@ -36,10 +53,12 @@
       border-radius: 10px;
       cursor: pointer;
     }
+
     #yes {
       background: #ff4d88;
       color: white;
     }
+
     #no {
       background: #ccc;
     }
@@ -47,7 +66,8 @@
 </head>
 <body>
 
-<img src="eyefluke.jpg" width="300">
+<!-- 👇 ใส่ class ตรงนี้ -->
+<img src="eyefluke.jpg" class="profile-img">
 
 <h1>✨ สวัสดีคนใจดี No.1 ของอาย 🦊</h1>
 <h2>ขอบคุณที่พยายามเข้ามาในโลกของอายนะ</h2>
@@ -56,42 +76,18 @@
 <p>🌈 ขอบคุณที่เป็นพื้นที่ปลอดภัยให้อาย</p>
 <p>ขอบคุณที่เข้าใจอาย คอยรับฟังอาย ให้กำลังใจอาย</p>
 <p>ไม่ว่าจะเจอเรื่องดีหรือไม่ดี อายก็มีเธออยู่ข้างๆเสมอ</p>
-<p>รู้สึกอบอุ่น สบายใจ ทุกครั้งที่อยู่กับเธอ 🫶🏻</p>
-<p>สำหรับเธอ มีแต่คำว่าขอบคุณเต็มไปหมดเลย</p>
+<p>รู้สึกอบอุ่นสบายใจทุกครั้งที่อยู่กับเธอ 🫶🏻</p>
+<p>สำหรับเธอมีแต่คำว่าขอบคุณเต็มไปหมดเลยย</p>
 <p>จนไม่รู้ว่าชีวิตนี้จะเจอคนแบบนี้ได้อีกเมื่อไหร่</p>
 
-<p>🐰 อายก็เลยอยากถามเธอว่าาา ... </p>
+<p>🐰 อายก็เลยอยากถามเธอว่าา ... </p>
 
 <p>V</p>
 <p>V</p>
 <p>V</p>
 <p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-<p>V</p>
-  
-<h2>เป็น - แฟน - กัน - มั้ย 🌻</h2>
+
+<h2>เป็น - แฟน - กัน - มั้ย🌻</h2>
 
 <button id="yes" onclick="yesClick()">อะเช 🤍</button>
 <button id="no" onmouseover="moveButton()">ม่ายยยย 😆</button>
