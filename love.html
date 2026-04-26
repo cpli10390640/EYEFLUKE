@@ -11,13 +11,10 @@
       margin: 0;
       position: relative;
       z-index: 1;
-
-      /* ตัวหนังสืออ่านง่าย */
-      color: white;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+      color: black;
+      overflow-x: hidden;
     }
 
-    /* 🌫 พื้นหลังเต็มจอ (ไม่ล้นแบบน่าเกลียด) */
     body::before {
       content: "";
       position: fixed; 
@@ -27,11 +24,11 @@
       height: 100%;
 
       background: url('BG2.jpg') no-repeat center center;
-      background-size: cover;   /* 👈 เต็มจอ */
-      background-position: center; /* 👈 จัดตำแหน่งกลาง */
+      background-size: cover;
+      background-position: center;
 
-      opacity: 0.3; /* 👈 ปรับความจาง */
-      z-index: -1;
+      opacity: 0.3;
+      z-index: -2;
     }
 
     h1 {
@@ -39,19 +36,45 @@
       animation: pop 0.6s ease;
     }
 
+    h2 {
+      animation: pop 0.8s ease;
+    }
+
     p {
       font-size: 20px;
       margin-bottom: 20px;
+      animation: pop 1s ease;
     }
 
     video {
       border-radius: 15px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      animation: pop 1.2s ease;
     }
 
     @keyframes pop {
-      0% { transform: scale(0); }
-      100% { transform: scale(1); }
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -30px;
+      font-size: 24px;
+      animation: floatUp 5s linear forwards;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.8);
+        opacity: 0;
+      }
     }
   </style>
 </head>
@@ -66,6 +89,26 @@
 </video>
 
 <p>*ปล. ดู VDO จบแล้ว มาจุ้บอายด้วยย อิอิ 😘</p>
+
+<script>
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 20) + "px";
+    heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 6000);
+  }
+
+  setInterval(createHeart, 250);
+</script>
 
 </body>
 </html>
